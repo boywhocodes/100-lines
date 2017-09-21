@@ -5,49 +5,60 @@
 let num = Math.floor(Math.random() * 5);
 
 let damianLillard = {
-
+  ppg: 27.0,
+  apg: 5.9,
 }
 let cjMccollum = {
-
+  ppg: 23.0,
+  apg: 3.6,
 }
 let jusfNurkic = {
-
+  ppg: 15.2,
+  apg: 3.2,
 }
 let alfarouqAminu = {
-
+  ppg: 8.7,
+  apg: 1.6,
 }
 let evanTurner = {
-
+  ppg: 9.0,
+  apg: 3.2,
 }
 let meyersLeonard = {
-
+  ppg: 5.4,
+  apg: 1.0,
 }
 let noahVonleh = {
-
+  ppg: 4.4,
+  apg: 0.4,
 }
 let jakeLayman = {
-
+  ppg: 2.2,
+  apg: 0.3,
 }
 let shabazzNapier = {
-
+  ppg: 4.1,
+  apg: 1.3,
 }
 let mauriceHarkless = {
-
+  ppg: 10.0,
+  apg: 1.1,
 }
 let patConnaughton = {
-
+  ppg: 2.5,
+  apg: 0.7,
 }
 let edDavis = {
-
+  ppg: 27.0,
+  apg: 0.6,
 }
 let calebSwannigan = {
-
+  ppg: 0.0,
+  apg: 0.6,
 }
 let zachCollins = {
-
-}
-let cjWilcox = {
-
+  ppg: 0.0,
+  apg: 0.6,  
 }
 
 
