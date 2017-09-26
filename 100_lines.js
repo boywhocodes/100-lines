@@ -206,3 +206,20 @@ let mountain = {
   comesInMultiples: "no",
   shape: "cone",
 }
+
+
+function DNAStrand(dna){
+  function substitute(value) {
+    if (value == "G") {
+      return "C"
+    } else if (value == "C") {
+      return "G"
+    } else if (value == "A") {
+      return "T"
+    } else if (value == "T") {
+      return "A"
+    }
+  }
+
+  return dna.split("").filter(substitute).join("");
+}
