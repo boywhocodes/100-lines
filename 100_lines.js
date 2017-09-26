@@ -210,17 +210,20 @@ let mountain = {
 
 function DNAStrand(dna){
   let letters = []
-  function substitute(value) {
-    if (value == "G") {
+  let splitDNA = dna.split("");
+  for (var i = 0; i < splitDNA.length; i++) {
+    if (splitDNA[i] == "G") {
       letters.push("C")
-    } else if (value == "C") {
+    } else if (splitDNA[i] == "C") {
       letters.push("G")
-    } else if (value == "A") {
+    } else if (splitDNA[i] == "A") {
       letters.push("T")
-    } else if (value == "T") {
+    } else if (splitDNA[i] == "T") {
       letters.push("A")
     }
   }
 
-  console.log(dna.split("").filter(substitute).join(""));
+
+  return letters.join("")
 }
+DNAStrand("AAAA")
