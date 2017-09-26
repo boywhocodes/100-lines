@@ -101,6 +101,34 @@ function removeSmallest(numbers) {
   return partOne.concat(partTwo)
 }
 
+var players = {
+  lillard: {
+    name: 'dame',
+    number: 0,
+    pos: 'pg',
+    attr: 'captain',
+    ppg: 29,
+    rpg: 2.3,
+    apg: 4.5,
+    tpg: function() {
+      this.tpg = this.ppg * 82;
+    },
+  },
+
+  mccollum: {
+    name: 'cj',
+    number: 3,
+    pos: 'sg',
+    attr: 'shootinStud',
+    ppg: 29,
+    rpg: 1.3,
+    apg: 2.5,
+    tpg: function() {
+      this.tpg = this.ppg * 82;
+    },
+  },
+};
+
 // guess the NBA player.  NBA player objects, pick a question, then enter a guss.
 
 
