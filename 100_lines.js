@@ -129,6 +129,17 @@ var players = {
   },
 };
 
+for (const prop in players) {
+  if (players[prop].ppg > 28) {
+    console.log(
+      prop +
+        ' is clearly an All-Star player with ' +
+        players[prop].ppg +
+        ' points per game'
+    );
+  }
+}
+
 // guess the NBA player.  NBA player objects, pick a question, then enter a guss.
 
 
