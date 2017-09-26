@@ -80,6 +80,13 @@ function threeQuestions() {
 
 }
 
+function race(v1, v2, g) {
+  let feetPerSecond1 = v1*60*60
+  let feetPerSecond2 = v2*60*60
+  let time = 0
+
+}
+
 // guess the NBA player.  NBA player objects, pick a question, then enter a guss.
 
 
