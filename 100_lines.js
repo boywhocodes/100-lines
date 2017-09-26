@@ -7,58 +7,72 @@ let num = Math.floor(Math.random() * 5);
 let damianLillard = {
   ppg: 27.0,
   apg: 5.9,
+  rpg: 4.9,
 }
 let cjMccollum = {
   ppg: 23.0,
   apg: 3.6,
+  rpg: 3.6,
 }
-let jusfNurkic = {
+let jusufNurkic = {
   ppg: 15.2,
   apg: 3.2,
+  rpg: 10.4,
 }
 let alfarouqAminu = {
   ppg: 8.7,
   apg: 1.6,
+  rpg: 7.4,
 }
 let evanTurner = {
   ppg: 9.0,
   apg: 3.2,
+  rpg: 3.8,
 }
 let meyersLeonard = {
   ppg: 5.4,
   apg: 1.0,
+  rpg: 3.2,
 }
 let noahVonleh = {
   ppg: 4.4,
   apg: 0.4,
+  rpg: 5.2,
 }
 let jakeLayman = {
   ppg: 2.2,
   apg: 0.3,
+  rpg: 0.7,
 }
 let shabazzNapier = {
   ppg: 4.1,
   apg: 1.3,
+  rpg: 1.2,
 }
 let mauriceHarkless = {
   ppg: 10.0,
   apg: 1.1,
+  rpg: 4.4,
 }
 let patConnaughton = {
   ppg: 2.5,
   apg: 0.7,
+  rpg: 1.3,
 }
 let edDavis = {
   ppg: 27.0,
   apg: 0.6,
+  rpg: 5.3,
 }
 let calebSwannigan = {
   ppg: 0.0,
-  apg: 0.6,
+  apg: 0.0,
+  rpg: 0.0,
 }
 let zachCollins = {
   ppg: 0.0,
-  apg: 0.6,  
+  apg: 0.0,
+  rpg: 0.0,
 }
 
 
