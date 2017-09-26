@@ -227,10 +227,27 @@ function DNAStrand(dna){
 
 
 function longestConsec(strarr, k) {
+  let longest = ""
 
+  for (var i = 0; i < strarr.length; i++) {
+    let innerLength = ""
+    for (let j = i; j < i+k; j++) {
+      if (j == strarr.length) {
+        break
+      }
+      innerLength += strarr[j]
+
+    }
+    if (innerLength.length > longest.length) {
+
+      longest = innerLength
+
+    }
+  }
+  
 }
 
 
 longestConsec(["itvayloxrp","wkppqsztdkmvcuwvereiupccauycnjutlv","vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2)
-longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
+longestConsec(["a","ab","abc","abcd"], 2)
 longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], -2)
