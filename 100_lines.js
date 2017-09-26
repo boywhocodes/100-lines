@@ -228,26 +228,33 @@ function DNAStrand(dna){
 
 function longestConsec(strarr, k) {
   let longest = ""
+  if (k <= 0 || k > strarr.length) {
+    return ""
+  }
+  if (k == 1) {
+    let newS = strarr.sort()
+    return newS[-1]
+  }
 
-  for (var i = 0; i < strarr.length; i++) {
+  for (var i = 0; i < strarr.length-1; i++) {
     let innerLength = ""
     for (let j = i; j < i+k; j++) {
       if (j == strarr.length) {
         break
       }
       innerLength += strarr[j]
-
     }
     if (innerLength.length > longest.length) {
-
       longest = innerLength
-
+      innerLength = ""
     }
   }
-  
+  return longest
 }
 
-
-longestConsec(["itvayloxrp","wkppqsztdkmvcuwvereiupccauycnjutlv","vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2)
-longestConsec(["a","ab","abc","abcd"], 2)
-longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], -2)
+function longestConsec(strarr, k) {
+  if( strarr.length==0 || k> strarr.length || k <1 ) return "";
+  let lens = strarr.map( (_,i,arr) => arr.slice(i,i+k).join('').length ),
+      i = lens.indexOf( Math.max(...lens) );
+  return strarr.slice(i,i+k).join('')
+}
