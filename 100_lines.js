@@ -154,6 +154,27 @@ function acceptableAge(array) {
   }
 }
 
+function accum(s) {
+	let splitString = s.split("");
+	console.log(splitString)
+  let string = ""
+  for (let i = 0; i < splitString.length; i++) {
+    for (let j = 0; j < i+1; j++) {
+    if (j == 0) {
+      string = string + splitString[i].toUpperCase()
+      } else {
+        string = string + splitString[i]
+      }
+    }
+    if (i == splitString.length - 1) {
+    string = string
+    } else {
+      string = string + "-"
+    }
+  }
+  console.log(string);
+}
+
 // guess the NBA player.  NBA player objects, pick a question, then enter a guss.
 
 
