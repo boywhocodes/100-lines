@@ -222,8 +222,15 @@ function DNAStrand(dna){
       letters.push("A")
     }
   }
-
-
   return letters.join("")
 }
-DNAStrand("AAAA")
+
+
+function longestConsec(strarr, k) {
+
+}
+
+
+longestConsec(["itvayloxrp","wkppqsztdkmvcuwvereiupccauycnjutlv","vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2)
+longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
+longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], -2)
