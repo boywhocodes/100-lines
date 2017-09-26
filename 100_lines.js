@@ -87,6 +87,20 @@ function race(v1, v2, g) {
 
 }
 
+function removeSmallest(numbers) {
+  let smallest = 0
+  let badNum = []
+  for (let i = 0; i < numbers.length; i++){
+    if (numbers[i] < numbers[smallest]) {
+      smallest = i
+    }
+  }
+
+  let partOne = numbers.slice(0,smallest)
+  let partTwo = numbers.slice((smallest + 1),numbers.length)
+  return partOne.concat(partTwo)
+}
+
 // guess the NBA player.  NBA player objects, pick a question, then enter a guss.
 
 
