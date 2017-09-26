@@ -140,6 +140,20 @@ for (const prop in players) {
   }
 }
 
+let currentYear = 2017
+var years = [1990, 1992, 2000, 2010, 1998]
+var blankArr = new Array
+
+function acceptableAge(array) {
+  for (j = 0; j < array.length; j++) {
+    if (currentYear - array[j] >= 18) {
+      blankArr.push(true)
+    } else {
+      blankArr.push(false)
+    }
+  }
+}
+
 // guess the NBA player.  NBA player objects, pick a question, then enter a guss.
 
 
