@@ -209,17 +209,18 @@ let mountain = {
 
 
 function DNAStrand(dna){
+  let letters = []
   function substitute(value) {
     if (value == "G") {
-      return "C"
+      letters.push("C")
     } else if (value == "C") {
-      return "G"
+      letters.push("G")
     } else if (value == "A") {
-      return "T"
+      letters.push("T")
     } else if (value == "T") {
-      return "A"
+      letters.push("A")
     }
   }
 
-  return dna.split("").filter(substitute).join("");
+  console.log(dna.split("").filter(substitute).join(""));
 }
