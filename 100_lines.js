@@ -177,24 +177,6 @@ function accum(s) {
 
 // guess the NBA player.  NBA player objects, pick a question, then enter a guss.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let sock = {
   color: "white",
   comesInMultiples: "yes",
