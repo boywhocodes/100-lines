@@ -258,3 +258,55 @@ function longestConsec(strarr, k) {
       i = lens.indexOf( Math.max(...lens) );
   return strarr.slice(i,i+k).join('')
 }
+function longestConsec(strarr, k) {
+    var longest = "";
+    for(var i=0;k>0 && i<=strarr.length-k;i++){
+      var tempArray = strarr.slice(i,i+k);
+      var tempStr = tempArray.join("");
+      if(tempStr.length > longest.length){
+        longest = tempStr;
+      }
+    }
+    return longest;
+}
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  let curDate = currentDate.split(" ");
+  let expDate = expirationDate.split(" ");
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  let curMonth = months.indexOf(curDate[0]);
+  let expMonth = months.indexOf(expDate[0]);
+  let curDay = parseInt(curDate[1]);
+  let expDay = parseInt(expDate[1]);
+  let curYear = parseInt(curDate[2]);
+  let expYear = parseInt(expDate[2]);
+  if (enteredCode === correctCode) {
+    if (curYear < expYear) {
+      return true
+    } else if (curYear == expYear && curMonth < expMonth) {
+      return true
+    } else if (curMonth == expMonth && curDay <= expDay) {
+      return true
+    }
+  }
+  return false
+}
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
+}
+
+function findOdd(A) {
+  for (let i = 0; i < A.length; i++) {
+    let odd = A[i]
+    let count = 0
+    for (let j = 0; j < A.length; j++) {
+      if (A[j] == A[i]) {
+        count += 1
+      }
+    }
+    if (count % 2 !== 0) {
+      return A[i]
+    }
+  }
+}
