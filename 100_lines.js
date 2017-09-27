@@ -325,3 +325,19 @@ function findOdd(A) {
 function findOdd(A) {
   return A.reduce(function(c,v){return c^v;},0);
 }
+
+function rot13(message){
+  let alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+  let splitMessage = message.split("");
+  console.log(splitMessage);
+  splitMessage.map(function encrypt(x) {
+    if (alpha.includes(x)) {
+      console.log(alpha[alpha.indexOf(x.downcase) + 13], "true");
+    } else {
+      console.log(x);
+    }
+  })
+
+}
+
+rot13("Test")
