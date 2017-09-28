@@ -326,18 +326,55 @@ function findOdd(A) {
   return A.reduce(function(c,v){return c^v;},0);
 }
 
+// Didn't solve
 function rot13(message){
   let alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   let splitMessage = message.split("");
-  console.log(splitMessage);
-  splitMessage.map(function encrypt(x) {
-    if (alpha.includes(x)) {
-      console.log(alpha[alpha.indexOf(x.downcase) + 13], "true");
+  let newMessage = []
+  splitMessage.forEach(function(letter, index, array) {
+      if (alpha.includes(letter.toLowerCase())) {
+        if (letter !== letter.toLowerCase()) {
+          if (alpha.indexOf(letter.toLowerCase()) >= 13) {
+            newMessage.push(alpha[alpha.indexOf(letter)-13])
+          } else {
+          newMessage.push(alpha[alpha.indexOf(letter)+ 13])
+        }
+      } else {
+          if (alpha.indexOf(letter) >= 13) {
+            newMessage.push(alpha[alpha.indexOf(letter)-13])
+          } else {
+          newMessage.push(alpha[alpha.indexOf(letter)+ 13])
+        }
+      }
     } else {
-      console.log(x);
+      newMessage.push(letter)
     }
   })
-
+  console.log(newMessage.join(""))
 }
 
-rot13("Test")
+
+function findUniq(arr) {
+  let dups = []
+  let uniq = 0
+  for (let i = 0; i < arr.length; i++) {
+    // if includes bad
+    let value = arr[i]
+    if (dups.includes(value)) {
+      continue
+    }
+    // for loop checking i + 1 at start seeing if it matches current val
+    for (var j = i+1; j < arr.length; j++) {
+      if (dups.includes(arr[j])) {
+        continue
+      } else if (arr[j] === value) {
+        dups.push(arr[j])
+        continue
+      }
+    }
+    if (dups.includes(value) == false) {uniq = value}
+  }
+  return uniq
+}
+
+findUniq([ 1, 1,2,2,2,3, 1, 2, 1, 1 ])
