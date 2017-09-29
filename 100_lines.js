@@ -382,6 +382,7 @@ function findUniq(arr) {
   return arr[0]==arr[1]?arr.pop():arr[0]
 }
 
+// Gap in Primes
 function gap(g, m, n) {
-    
+
 }
