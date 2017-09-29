@@ -383,5 +383,5 @@ function findUniq(arr) {
 }
 
 function gap(g, m, n) {
-    // your code
+    
 }
