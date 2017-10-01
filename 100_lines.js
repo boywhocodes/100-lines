@@ -388,7 +388,7 @@ function gap(g, m, n) {
 }
 
 // Calculating with Functions
-function zero() {}
+// function zero() {}
 function one() {}
 function two() {}
 function three() {}
