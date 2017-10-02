@@ -438,21 +438,26 @@ var maxSequence = function(arr){
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
       let sliced = arr.slice(i,j+1)
-      console.log(sliced, "sliced");
       if (sliced.length == 0) {
         continue
       }
       let arrSum = sliced.reduce(function(accum, value){
         return accum + value
       })
-      console.log(arrSum, "arrSum");
       if (arrSum >= tempSum) {
         tempSum = arrSum
-        console.log(tempSum, "tempSum");
       }
     }
   }
   return tempSum;
-
 }
-maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+
+var maxSequence = function(arr){
+  var min = 0, ans = 0, i, sum = 0;
+  for (i = 0; i < arr.length; ++i) {
+    sum += arr[i];
+    min = Math.min(sum, min);
+    ans = Math.max(ans, sum - min);
+  }
+  return ans;
+}
