@@ -417,32 +417,35 @@ function nine() {
   return 9
 }
 
-function plus() {
-  return +
-}
-function minus() {
-  return -
-}
-function times() {
-  return *
-}
-function dividedBy() {
-  return /
-}
+// function plus() {
+//   return +
+// }
+// function minus() {
+//   return -
+// }
+// function times() {
+//   return *
+// }
+// function dividedBy() {
+//   return /
+// }
 
 var maxSequence = function(arr){
-  let maxSum = 0
+  let permSum = 0
+  let tempSum = 0
+  let arrSum = 0
+
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
-      if ((maxSum + arr[j]) >= maxSum) {
-        maxSum += maxSum + arr[j]
-        continue
-      } else {
-        break
-      }
+      let sliced = arr.slice(i,j+1)
+      console.log(sliced);
+      sliced.reduce(function(arrSum, value){
+        arrSum += value
+      })
+      console.log(arrSum);
     }
   }
-  console.log(maxSum);
+  console.log(ansArr);
 
 }
 maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])
