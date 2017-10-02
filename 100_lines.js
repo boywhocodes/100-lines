@@ -432,5 +432,17 @@ function dividedBy() {
 
 var maxSequence = function(arr){
   let maxSum = 0
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if ((maxSum + arr[j]) >= maxSum) {
+        maxSum += maxSum + arr[j]
+        continue
+      } else {
+        break
+      }
+    }
+  }
+  console.log(maxSum);
 
 }
+maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])
