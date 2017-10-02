@@ -429,3 +429,8 @@ function times() {
 function dividedBy() {
   return /
 }
+
+var maxSequence = function(arr){
+  let maxSum = 0
+
+}
