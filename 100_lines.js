@@ -461,3 +461,9 @@ var maxSequence = function(arr){
   }
   return ans;
 }
+
+function isPangram(string){
+
+}
+
+isPangram("The quick brown fox jumps over the lazy dog")
