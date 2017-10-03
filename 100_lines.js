@@ -518,11 +518,11 @@ function isPangram(str) {
 function findSubarrMaxSum(arr){
   let maxSumArr = []
   let permSum = 0;
+  let answerArr = []
 
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
       let slicedArr = arr.slice(i,j+1);
-      console.log(slicedArr,"sliced");
       if (slicedArr.length == 0) {
         continue
       }
@@ -530,16 +530,14 @@ function findSubarrMaxSum(arr){
         return accum + value
       })
       if (arrSum > permSum) {
-        console.log(arrSum, "arrSum");
         permSum = arrSum
         maxSumArr = []
         maxSumArr.push(slicedArr)
-        console.log(maxSumArr, "maxSumArr");
       } else if (arrSum == permSum) {
         maxSumArr.concat(slicedArr)
-        console.log(maxSumArr, "maxSumArr");
       }
     }
   }
+  return answerArr.concat(maxSumArr) + answerArr.concat(permSum)
 }
 findSubarrMaxSum([-2, 1, -3, 4, -1, 2, 1, -5, 4])
