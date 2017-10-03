@@ -463,7 +463,47 @@ var maxSequence = function(arr){
 }
 
 function isPangram(string){
+  let splitArr = string.split("")
+  alphaObj = {
+    "a": 0,
+    "b": 0,
+    "c": 0,
+    "d": 0,
+    "e": 0,
+    "f": 0,
+    "g": 0,
+    "h": 0,
+    "i": 0,
+    "j": 0,
+    "k": 0,
+    "l": 0,
+    "m": 0,
+    "n": 0,
+    "o": 0,
+    "p": 0,
+    "q": 0,
+    "r": 0,
+    "s": 0,
+    "t": 0,
+    "u": 0,
+    "v": 0,
+    "w": 0,
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    
+  }
 
+  for (let i = 0; i < splitArr.length; i++) {
+    alphaObj[splitArr[i].toLowerCase()] += 1
+  }
+  for ( j in alphaObj) {
+
+    if (alphaObj[j] === 0) {
+      return false
+    }
+  }
+  return true
 }
 
-isPangram("The quick brown fox jumps over the lazy dog")
+isPangram("The quick brown fox jumps over the la dog")
