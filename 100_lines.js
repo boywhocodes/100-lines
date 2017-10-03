@@ -491,7 +491,7 @@ function isPangram(string){
     "x": 0,
     "y": 0,
     "z": 0,
-    
+
   }
 
   for (let i = 0; i < splitArr.length; i++) {
@@ -506,4 +506,11 @@ function isPangram(string){
   return true
 }
 
-isPangram("The quick brown fox jumps over the la dog")
+function isPangram(str) {
+    var s = str.toLowerCase();
+    var letters = "zqxjkvbpygfwmucldrhsnioate";
+    for (var i = 0; i < 26; i++)
+        if (s.indexOf(letters.charAt(i)) == -1)
+            return false;
+    return true;
+}
