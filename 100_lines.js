@@ -556,9 +556,15 @@ function maxContiguousSum (arr) {
       if (slicedArr.length == 0) {
         continue
       }
-      arrSum = slicedArr.reduce
+      arrSum = slicedArr.reduce(function(accum, value){
+        return accum + value
+      })
+      if (arrSum >= sum) {
+        sum = arrSum
+      }
     }
   }
+  return sum
 }
 
 maxContiguousSum([3, -4, 8, 7, -10, 19, -3])
