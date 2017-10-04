@@ -534,10 +534,31 @@ function findSubarrMaxSum(arr){
         maxSumArr = []
         maxSumArr.push(slicedArr)
       } else if (arrSum == permSum) {
-        maxSumArr.concat(slicedArr)
+        maxSumArr.push(slicedArr)
       }
     }
   }
-  return answerArr.concat(maxSumArr) + answerArr.concat(permSum)
+
+  console.log(maxSumArr, "maxSumArr");
+  answerArr = answerArr.concat(maxSumArr)
+  answerArr = answerArr.push(permSum)
+  console.log(answerArr, "answerArr");
+
 }
-findSubarrMaxSum([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+// findSubarrMaxSum([4, -1, 2, 1, -40, 1, 2, -1, 4])
+
+function maxContiguousSum (arr) {
+  let sum = 0
+  let arrSum = 0
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      slicedArr = arr.slice(i,j+1);
+      if (slicedArr.length == 0) {
+        continue
+      }
+      arrSum = slicedArr.reduce
+    }
+  }
+}
+
+maxContiguousSum([3, -4, 8, 7, -10, 19, -3])
