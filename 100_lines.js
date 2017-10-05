@@ -567,4 +567,8 @@ function maxContiguousSum (arr) {
   return sum
 }
 
-maxContiguousSum([3, -4, 8, 7, -10, 19, -3])
+function solution(roman){
+
+}
+
+// solution('XXI'); // should return 21
