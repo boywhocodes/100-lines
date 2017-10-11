@@ -587,13 +587,24 @@ function remember(str) {
 function Xbonacci(signature,n){
   let newArr = []
   let curArr = signature.slice()
+  newArr.concat(curArr)
   let arrLength = signature.length
-  let revArr = signature.reverse()
+  let revArr = curArr.reverse()
   let slicedArr = revArr.slice(0,arrLength)
-  slicedArr.reduce(function(accum, value){
+  let redArr = slicedArr.reduce(function(accum, value){
     return accum + value
   })
-  console.log(slicedArr);
+  while (newArr.length < n) {
+    curArr = newArr.slice()
+    revArr = curArr.reverse()
+    slicedArr = revArr.slice(0, arrLength)
+    redArr = slicedArr.reduce(function(accum, value){
+      return accum + value
+    })
+    newArr.concat(redArr)
+  }
+  console.log(slicedArr, "sliced");
+  console.log(redArr, "reduced");
 }
 
 Xbonacci([0,1],10)
