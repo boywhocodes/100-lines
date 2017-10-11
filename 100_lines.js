@@ -590,6 +590,9 @@ function Xbonacci(signature,n){
   let arrLength = signature.length
   let revArr = signature.reverse()
   let slicedArr = revArr.slice(0,arrLength)
+  slicedArr.reduce(function(accum, value){
+    return accum + value
+  })
   console.log(slicedArr);
 }
 
