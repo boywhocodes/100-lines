@@ -585,8 +585,12 @@ function remember(str) {
 // Test.assertSimilar(remember("11pinguin"), ["1", "i", "n"]);
 
 function Xbonacci(signature,n){
+  let newArr = []
+  let curArr = signature.slice()
   let arrLength = signature.length
-  console.log(signature);
+  let revArr = signature.reverse()
+  let slicedArr = revArr.slice(0,arrLength)
+  console.log(slicedArr);
 }
 
 Xbonacci([0,1],10)
