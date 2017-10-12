@@ -608,7 +608,7 @@ function Xbonacci(signature,n){
     })
     curArr.push(redArr)
     // console.log(curArr, "current");
-    // console.log(revArr, "reversed");
+    console.log(revArr, "reversed");
     console.log(slicedArr, "sliced");
     console.log(redArr, "reduced");
     console.log(newArr, "new");
