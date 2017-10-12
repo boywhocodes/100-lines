@@ -585,15 +585,19 @@ function remember(str) {
 // Test.assertSimilar(remember("11pinguin"), ["1", "i", "n"]);
 
 function Xbonacci(signature,n){
+  if (n == 0 ) {
+    return []
+  }
+  if (n < signature.length) {
+    return signature.slice(0,n)
+  }
   let newArr = []
   let curArr = signature.slice()
 
   let arrLength = signature.length
-  let revArr = curArr.reverse()
-  let slicedArr = revArr.slice(0,arrLength)
-  let redArr = slicedArr.reduce(function(accum, value){
-    return accum + value
-  })
+  let revArr
+  let slicedArr
+  let redArr
   while (curArr.length < n) {
     let loopArr = []
     loopArr = curArr.slice()
@@ -607,7 +611,7 @@ function Xbonacci(signature,n){
     // console.log(revArr, "reversed");
     // console.log(slicedArr, "sliced");
     // console.log(redArr, "reduced");
-    // console.log(newArr, "new");
+    console.log(newArr, "new");
   }
   return curArr
 }
