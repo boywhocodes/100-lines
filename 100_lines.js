@@ -607,11 +607,11 @@ function Xbonacci(signature,n){
       return accum + value
     })
     curArr.push(redArr)
-    console.log(curArr, "current");
-    console.log(revArr, "reversed");
-    console.log(slicedArr, "sliced");
-    console.log(redArr, "reduced");
-    console.log(newArr, "new");
+      // console.log(curArr, "current");
+      // console.log(revArr, "reversed");
+      // console.log(slicedArr, "sliced");
+      // console.log(redArr, "reduced");
+      // console.log(newArr, "new");
   }
   return curArr
 }
