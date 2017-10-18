@@ -16,14 +16,14 @@
 
 <form class="" action="index.html" method="post">
   <label for="email">Email: </label>
-  <input id="email" type="email" name="asdf" placeholder="lkj" required="" value="adjhf">
+  <input id="email" type="email" name="asdf" placeholder="lkj"  value="adjhf">
   <label for="password">Password: </label>
   <input id="password" type="password" name="sdfwdfdf" placeholder="lkj">
   <input type="submit" name="asdf" >
 </form>
 
 <p>Your Favorite Power Ranger:</p>
-<form class="" action="index.html" method="post">
+<form class="" action="index.html" method="get" >
   <label for="black">Black Ranger:</label>
   <input type="radio" name="ranger">
   <label for="green">Green Ranger:</label>
@@ -34,6 +34,15 @@
   <input type="radio" name="ranger">
   <label for="yellow">Yellow Ranger:</label>
   <input type="radio" name="ranger">
+
+  <select class="" name="face">
+    <option value="happy">: )</option>
+    <option value="sad">: (</option>
+    <option value="indifferent">: /</option>
+
+    <label for="text">Explain:</label>
+    <textarea name="name" rows="3" cols="80"></textarea>
+  </select>
 
   <button type="button" name="button">Post Request!</button>
 </form>
